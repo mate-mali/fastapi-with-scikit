@@ -1,6 +1,7 @@
 **I - Krótki opis systemu/usługi (jaki problem rozwiązuje):** Jest to system oparty na datasecie iris, dostepnym w pakiecie sklearn - model przewiduje typ kwiatu poprzez anlize czterech wynierow tych kwiatow, dokonujac klasycikacji do jesnej z trzech kategorii 
 
 **II - Instrukcję instalacji i uruchomienia:** 
+
 0. stworzenie srodowiska wirtualnego .venv
 1. uruchomic "uv pip install -r requirements.txt" 
 2. po instalacji aktywowac venv poprzez uruchomienie komendy w terminalu (cmd) ".venv\Scripts\activate"
