@@ -2,11 +2,12 @@
 
 **II - Instrukcję instalacji i uruchomienia:** 
 
-0. stworzenie srodowiska wirtualnego .venv
-1. uruchomic "uv pip install -r requirements.txt" 
-2. po instalacji aktywowac venv poprzez uruchomienie komendy w terminalu (cmd) ".venv\Scripts\activate"
-3. uruchomic server fatapi, mozna to zrobic wykonujac z poziomu folderu projektu "uvicorn main:app"
-4. uruchomienie strony pod adresem przypisanym do servera uvicorn, domyslnei bedzie to albo localhost:8000 albo 127.0.0.1:8000
+1. stworzenie srodowiska wirtualnego .venv
+
+2. uruchomic "uv pip install -r requirements.txt" 
+3. po instalacji aktywowac venv poprzez uruchomienie komendy w terminalu (cmd) ".venv\Scripts\activate"
+4. uruchomic server fatapi, mozna to zrobic wykonujac z poziomu folderu projektu "uvicorn main:app"
+5. uruchomienie strony pod adresem przypisanym do servera uvicorn, domyslnei bedzie to albo localhost:8000 albo 127.0.0.1:8000
 
 **II - wymagania sposób przygotowania środowiska (`uv`)** 
 uv venv - zainicjowanie wirtualnego srodowiska 
