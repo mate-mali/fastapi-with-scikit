@@ -2,7 +2,7 @@
 
 **II - Instrukcję instalacji i uruchomienia:** 
 
-1. stworzenie srodowiska wirtualnego .venv
+1. stworzenie srodowiska wirtualnego .venv - "uv venv .venv"
 
 2. uruchomic "uv pip install -r requirements.txt" 
 3. po instalacji aktywowac venv poprzez uruchomienie komendy w terminalu (cmd) ".venv\Scripts\activate"
@@ -10,9 +10,12 @@
 5. uruchomienie strony pod adresem przypisanym do servera uvicorn, domyslnei bedzie to albo localhost:8000 albo 127.0.0.1:8000
 
 **II - wymagania sposób przygotowania środowiska (`uv`)** 
-uv venv - zainicjowanie wirtualnego srodowiska 
-uv pip install -r requirements.txt
-jesli z jakiegos powodu reqirements.txt nie istnieje, mozna go wygenerowac komenda uv export --no-hashes > requirements.txt
+
+1. "uv venv .venv" - zainicjowanie wirtualnego srodowiska 
+2. "uv pip install -r requirements.txt"
+
+3. jesli z jakiegos powodu reqirements.txt nie istnieje, mozna go wygenerowac komenda "uv export --no-hashes > requirements.txt"
+
 III - sposób uruchomienia serwera FastAPI 
 uvicorn main:app
 
@@ -48,8 +51,10 @@ przykladowy response:
 }
 
 **IV - opis endpointów:**
- - /docs - Json Swagger dokumentujacy endpointy i pozwalajacy na podglad i wykonywanie komend get i post (w tym przypadku)
- - /retrain - enpoint ktory uruchamia funkcje retrainmodel - ona uruchamia sklearn ktory wykonuje model.fit() dla modelu SVC uzytego w tym projekcie i eksportuje wytrenowany model do modelx.joblib oraz ekportuje target_names.joblib, ktorego uzywamy d przetlumaczenia wyniku predykcji na koncowa nazwe kwiatu
+ - /docs (GET)- Json Swagger dokumentujacy endpointy i pozwalajacy na podglad i wykonywanie komend get i post (w tym przypadku)
+ - /retrain (GET)- enpoint ktory uruchamia funkcje retrainmodel - ona uruchamia sklearn ktory wykonuje model.fit() dla modelu SVC uzytego w tym projekcie i eksportuje wytrenowany model do modelx.joblib oraz ekportuje target_names.joblib, ktorego uzywamy d przetlumaczenia wyniku predykcji na koncowa nazwe kwiatu
+ - /input/raw (GET)- enpoint ktory zwraca dataset uzyty do trenowania w jego oryginalnej psotaci - jest to funkcjonalnosc kotra sie przydaje w celu pobierania danych lub ich podgladu 
+ - /input/predict_dict (POST) - enpoint akceptuje slownik z czterema kluczami/json z czterema kluczami - ktore nastepnei są podawane do wbudowanej funkcji modelx.predict() - winikowa pomyslnego POST-a jest zwracany jest json ktory zawiera wewnatrz dwa klucze: prediction_class - ktory jest numerem sklasyfikowanego kwiatu, i prediction_name, ktory jest wynikie mzestawienia prediction_class z lista trzyelementowa target_names
 
 **V - Iprzykład zapytania i odpowiedzi (np. JSON):**
 *Zapytanie:*
