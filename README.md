@@ -2,7 +2,7 @@
 
 **II - Instrukcję instalacji i uruchomienia:** 
 
-1. stworzenie srodowiska wirtualnego .venv
+1. stworzenie srodowiska wirtualnego .venv - "uv venv .venv"
 
 2. uruchomic "uv pip install -r requirements.txt" 
 3. po instalacji aktywowac venv poprzez uruchomienie komendy w terminalu (cmd) ".venv\Scripts\activate"
